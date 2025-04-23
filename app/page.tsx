@@ -9,13 +9,11 @@ import Contact from "./_components/Contact";
 import Map from "./_components/Map";
 import Footer from "./_components/Footer";
 import ScrollToTop from "./_components/ScrollToTop";
-import MenuMobile from "./_components/MenuMobile";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-[#1E3B39] text-white">
       <Header />
-      <MenuMobile />
       <Hero />
       <About />
       <Products />
