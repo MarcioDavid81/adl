@@ -21,7 +21,8 @@ const Market = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div>
-              <h3 className="text-2xl font-bold mb-6">Cotações Atuais</h3>
+              <h3 className="text-2xl font-bold">Cotações Atuais</h3>
+              <p className="mb-6">Preços válidos para hoje: 23/04/2025.</p>
               <div className="space-y-6">
                 <PriceCard />
               </div>
