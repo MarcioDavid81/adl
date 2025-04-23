@@ -169,13 +169,13 @@ const Footer = () => {
                     </p>
                     <div className="flex space-x-4">
                       <a
-                        href="#"
+                        href="/privacy-politic"
                         className="text-sm text-[#7EBFB3] hover:text-[#E6B325] cursor-pointer"
                       >
                         Política de Privacidade
                       </a>
                       <a
-                        href="#"
+                        href="/terms-of-use"
                         className="text-sm text-[#7EBFB3] hover:text-[#E6B325] cursor-pointer"
                       >
                         Termos de Uso
