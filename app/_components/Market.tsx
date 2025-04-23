@@ -2,15 +2,16 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ChartLine } from "lucide-react";
+import PriceCard from "./PriceCard";
 
 const Market = () => {
     return ( 
         <section id="cotacoes" className="py-20 bg-white text-[#1E3B39]">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4">
+            <h3 className="text-3xl md:text-5xl font-bold mb-4">
               Cotações de Cereais
-            </h2>
+            </h3>
             <div className="w-24 h-1 bg-[#E6B325] mx-auto mb-8"></div>
             <p className="text-lg max-w-3xl mx-auto">
               Acompanhe as cotações e variações do mercado de cereais para tomar
@@ -18,86 +19,16 @@ const Market = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div>
-              <Tabs defaultValue="mensal" className="w-full">
-                <TabsList className="grid w-full grid-cols-3 mb-8">
-                  <TabsTrigger
-                    value="trigo"
-                    className="!rounded-button cursor-pointer whitespace-nowrap"
-                  >
-                    Trigo
-                  </TabsTrigger>
-                  <TabsTrigger
-                    value="aveia-branca"
-                    className="!rounded-button cursor-pointer whitespace-nowrap"
-                  >
-                    Aveia Branca
-                  </TabsTrigger>
-                  <TabsTrigger
-                    value="azevem"
-                    className="!rounded-button cursor-pointer whitespace-nowrap"
-                  >
-                    Azevém
-                  </TabsTrigger>
-                </TabsList>
-                <TabsContent value="trigo" className="h-[400px]">
-                  <div className="w-full h-full">
-                    <Card>
-                      <CardHeader>
-                        <CardTitle>Trigo</CardTitle>
-                      </CardHeader>
-                      <CardContent className="flex gap-4">
-                        <ChartLine className="text-[#1E3B39] text-2xl" />
-                        <div>
-                          <span>R$1.400,00 por tn</span>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </div>
-                </TabsContent>
-                <TabsContent value="aveia-branca" className="h-[400px]">
-                  <div className="w-full h-full">
-                    <Card>
-                      <CardHeader>
-                        <CardTitle>Aveia Branca</CardTitle>
-                      </CardHeader>
-                      <CardContent className="flex gap-4">
-                        <ChartLine className="text-[#1E3B39] text-2xl" />
-                        <div className="flex gap-4">
-                          <p>PH acima de 50,0</p>
-                          <span>R$1,00 por kg</span>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </div>
-                </TabsContent>
-                <TabsContent value="azevem" className="h-[400px]">
-                  <div className="w-full h-full">
-                    <Card>
-                      <CardHeader>
-                        <CardTitle>Azevém</CardTitle>
-                      </CardHeader>
-                      <CardContent className="flex gap-4">
-                        <ChartLine className="text-[#1E3B39] text-2xl" />
-                        <div>
-                          <span>R$4,00 por kg</span>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </div>
-                </TabsContent>
-              </Tabs>
+              <h3 className="text-2xl font-bold mb-6">Cotações Atuais</h3>
+              <div className="space-y-6">
+                <PriceCard />
+              </div>
             </div>
 
             <div>
               <h3 className="text-2xl font-bold mb-6">Tendências de Mercado</h3>
-              <p className="mb-6">
-                O mercado de cereais está em constante evolução, influenciado
-                por diversos fatores como clima, políticas agrícolas, demanda
-                global e inovações tecnológicas.
-              </p>
-
               <div className="space-y-6">
                 <div className="bg-[#f8f9fa] p-6 rounded-lg border-l-4 border-[#E6B325]">
                   <h4 className="font-bold mb-2 flex items-center">
@@ -135,11 +66,6 @@ const Market = () => {
                   </p>
                 </div>
               </div>
-
-              <Button className="mt-8 bg-[#1E3B39] hover:bg-[#1E3B39]/90 text-white !rounded-button cursor-pointer whitespace-nowrap">
-                <i className="fas fa-download mr-2"></i>
-                Baixar Relatório Completo
-              </Button>
             </div>
           </div>
         </div>
