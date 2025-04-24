@@ -31,11 +31,10 @@ const navItems = [
   {
     label: "Contato",
     href: "#contato",
-  }
-]
+  },
+];
 
 const Header = () => {
-
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   // IMPEDE O SCROOL DA PÁGINA QUANDO O MENU MOBILE ESTIVER ABERTO
@@ -45,7 +44,7 @@ const Header = () => {
 
   return (
     <header className="sticky top-0 z-50 bg-[#1E3B39] shadow-md border-b border-[#7EBFB3]/20">
-      <div className="container mx-auto flex justify-between items-center py-4">
+      <div className="container mx-auto flex justify-between items-center p-4">
         <Link href="/">
           <Image
             src="/adl-sf.png"
@@ -56,9 +55,9 @@ const Header = () => {
           />
         </Link>
         <nav className="hidden md:flex space-x-8">
-        {navItems.map((item) => (
-            <Link 
-              key={item.href} 
+          {navItems.map((item) => (
+            <Link
+              key={item.href}
               href={item.href}
               className="text-white hover:text-[#E6B325] transition-colors cursor-pointer whitespace-nowrap"
             >
@@ -66,15 +65,18 @@ const Header = () => {
             </Link>
           ))}
         </nav>
-          <Button
-            className="md:hidden text-white bg-transparent hover:bg-transparent"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          >
-          <MenuIcon className="w-6 h-6" />
-          </Button>
+        <MenuIcon
+          size={32}
+          className="md:hidden text-gray-400 hover:text-gray-500 cursor-pointer"
+          onClick={() => setMobileMenuOpen(true)}
+        />
       </div>
 
-      <MenuMobile isOpen={mobileMenuOpen} onClose={() => setMobileMenuOpen(false)} navItems={navItems} />
+      <MenuMobile
+        isOpen={mobileMenuOpen}
+        onClose={() => setMobileMenuOpen(false)}
+        navItems={navItems}
+      />
     </header>
   );
 };

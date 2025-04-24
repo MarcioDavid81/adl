@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { FaFacebook, FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 
 const Footer = () => {
     return ( 
@@ -22,27 +23,27 @@ const Footer = () => {
                       <div className="flex space-x-4">
                         <a
                           href="#"
-                          className="text-[#7EBFB3] hover:text-[#E6B325] cursor-pointer"
+                          className="bg-[#7EBFB3] hover:bg-[#E6B325] w-10 h-10 rounded-full flex items-center justify-center transition-colors cursor-pointer"
                         >
-                          <i className="fab fa-facebook-f"></i>
+                          <FaFacebook className="text-[#1E3B39]" size={24} />
                         </a>
                         <a
                           href="#"
-                          className="text-[#7EBFB3] hover:text-[#E6B325] cursor-pointer"
+                          className="bg-[#7EBFB3] hover:bg-[#E6B325] w-10 h-10 rounded-full flex items-center justify-center transition-colors cursor-pointer"
                         >
-                          <i className="fab fa-instagram"></i>
+                          <FaInstagram className="text-[#1E3B39]" size={24} />
                         </a>
                         <a
                           href="#"
-                          className="text-[#7EBFB3] hover:text-[#E6B325] cursor-pointer"
+                          className="bg-[#7EBFB3] hover:bg-[#E6B325] w-10 h-10 rounded-full flex items-center justify-center transition-colors cursor-pointer"
                         >
-                          <i className="fab fa-linkedin-in"></i>
+                          <FaLinkedin className="text-[#1E3B39]" size={24} />
                         </a>
                         <a
                           href="#"
-                          className="text-[#7EBFB3] hover:text-[#E6B325] cursor-pointer"
+                          className="bg-[#7EBFB3] hover:bg-[#E6B325] w-10 h-10 rounded-full flex items-center justify-center transition-colors cursor-pointer"
                         >
-                          <i className="fab fa-whatsapp"></i>
+                          <FaWhatsapp className="text-[#1E3B39]" size={24} />
                         </a>
                       </div>
                     </div>
@@ -80,6 +81,14 @@ const Footer = () => {
                             className="text-[#7EBFB3] hover:text-[#E6B325] transition-colors cursor-pointer"
                           >
                             Serviços
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#cotacoes"
+                            className="text-[#7EBFB3] hover:text-[#E6B325] transition-colors cursor-pointer"
+                          >
+                            Cotações
                           </a>
                         </li>
                         <li>
@@ -164,8 +173,7 @@ const Footer = () => {
         
                   <div className="pt-8 border-t border-[#7EBFB3]/20 flex flex-col md:flex-row justify-between items-center">
                     <p className="text-sm text-[#7EBFB3] mb-4 md:mb-0">
-                      &copy; 2025 ADL Comércio de Cereais LTDA. Todos os direitos
-                      reservados.
+                      &copy; {new Date().getFullYear()} ADL Comércio de Cereais. Todos os direitos reservados.
                     </p>
                     <div className="flex space-x-4">
                       <a
