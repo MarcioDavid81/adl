@@ -1,6 +1,5 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
 import { MenuIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -42,8 +41,22 @@ const Header = () => {
     document.body.style.overflow = mobileMenuOpen ? "hidden" : "auto";
   }, [mobileMenuOpen]);
 
+  // ALTERA A COR DO BACKGROUND DO MENU QUANDO COMEÇAR O SCROLL
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="sticky top-0 z-50 bg-[#1E3B39] shadow-md border-b border-[#7EBFB3]/20">
+    <header className={`fixed w-full top-0 z-50 bg-transparent  transition-all duration-300 ${scrolled ? "bg-[#1E3B39]/90 backdrop-blur-lg" : ""}`}>
       <div className="container mx-auto flex justify-between items-center p-4">
         <Link href="/">
           <Image

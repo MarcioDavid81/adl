@@ -1,4 +1,3 @@
-// components/HorarioComercial.js
 import { useState, useEffect } from 'react';
 
 export default function HorarioComercial() {
