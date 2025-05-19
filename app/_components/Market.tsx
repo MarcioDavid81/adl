@@ -27,7 +27,7 @@ const Market = () => {
                 <h3 className="text-2xl font-bold">Tendências de Mercado</h3>
               <p className="mb-6">Preços válidos para hoje: {new Date().toLocaleDateString()}.</p>
               
-                <iframe id="frmPreview" src="https://selos.agrolink.com.br/selos/carregaselo?servico=cotacoes&uf=9839,9844,9845&p=1090,9,1812&l=&esp=&cor=rgb(30,59,57)&w=300&h=200"></iframe>
+                <iframe id="frmPreview" frameBorder="0" scrolling="no" width="500" height="400" style={{ border: "none" }} src="https://selos.agrolink.com.br/selos/carregaselo?servico=cotacoes&uf=9839,9844,9845&p=1090,9,1812&l=&esp=&cor=rgb(30,59,57)&w=300&h=200"></iframe>
               
             </div>
           </div>
