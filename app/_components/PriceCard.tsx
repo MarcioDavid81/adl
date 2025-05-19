@@ -10,17 +10,17 @@ interface PriceItemProps {
 
 const priceItems = [
     {
-        product: "Trigo",
-        price: "R$ 70,00",
+        product: "Trigo TON",
+        price: "R$ 1.500,00",
         icon: <WheatIcon size={32} />
     },
     {
-        product: "Soja",
+        product: "Soja SC/60Kg",
         price: "R$ 120,00",
         icon: <BeanIcon size={32} />
     },
     {
-        product: "Milho",
+        product: "Milho SC/60Kg",
         price: "R$ 80,00",
         icon: <GiCorn size={32} />
     }

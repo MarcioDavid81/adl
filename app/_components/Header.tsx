@@ -56,7 +56,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header className={`fixed w-full top-0 z-50 bg-transparent  transition-all duration-300 ${scrolled ? "bg-[#1E3B39]/90 backdrop-blur-lg" : ""}`}>
+    <header className={`fixed w-full top-0 z-50 transition-all duration-300 ${scrolled ? "bg-[#1E3B39]/90 backdrop-blur-lg" : "bg-transparent"}`}>
       <div className="container mx-auto flex justify-between items-center p-4">
         <Link href="/">
           <Image
