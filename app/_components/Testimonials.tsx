@@ -106,7 +106,7 @@ const Testimonials = () => {
                 <p className="italic mb-4">
                   "A ADL é uma parceira confiável que entende as necessidades da
                   nossa indústria. Os cereais fornecidos são de excelente
-                  qualidade, o que reflete diretamente nos nossos produtos."
+                  qualidade, o que reflete nos nossos produtos."
                 </p>
                 <div className="flex text-[#E6B325]">
                   <i className="fas fa-star"></i>
