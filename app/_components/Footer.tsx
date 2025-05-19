@@ -15,9 +15,7 @@ const Footer = () => {
                           height={200}
                         />
                         <p className="mb-6">
-                          Qualidade e excelência no comércio de cereais desde 2005,
-                          atendendo produtores e empresas com compromisso e
-                          responsabilidade.
+                          Qualidade e excelência no comércio de cereais desde 2005.
                         </p>
                       </div>
                       <div className="flex space-x-4">
